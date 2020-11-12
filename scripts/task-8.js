@@ -91,3 +91,21 @@ const users =  [
       age: 39,
     },
   ];
+  // Write code under this line
+  const getUsersWithFriend = (users, friendName) => {
+    return users
+        .filter(user => user["friends"].includes(friendName))
+        .map(user => user.name);
+};
+
+// Write code under this line
+// const getUsersWithFriend = (array, friendName) => array
+//  .filter(({ friends }) => friends.includes(friendName)).map(({ name }) => (name));
+// function getWithFriend ({friends}) { return friends; }
+// function getWithFriend ({name}) { return name; }
+
+console.log(getUsersWithFriend(users, 'Briana Decker'));
+// [ 'Sharlene Bush', 'Sheree Anthony' ]
+
+console.log(getUsersWithFriend(users, 'Goldie Gentry'));
+// [ 'Elma Head', 'Sheree Anthony' ]
